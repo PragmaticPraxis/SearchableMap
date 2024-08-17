@@ -33,7 +33,7 @@ struct SearchView: View {
                         }
                     }
                     .onSubmit {
-                        Task { @MainActor in
+                        Task {
                             searchResults = await MKMapItem.search(for: searchString, in: visibleRegion)
                         }
                     }
